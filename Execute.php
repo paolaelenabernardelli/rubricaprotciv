@@ -13,7 +13,7 @@ $text = isset($message['text']) ? $message['text'] : "";
 $text = trim($text); $text = strtolower($text); header("Content-Type: application/json"); 
 $parameters = array('chat_id' => $chatId, "text" => $text); 
 $parameters["method"] = "sendMessage"; echo json_encode($parameters);
-echo "Ciao $firstname $lastname il tuo username è $username";
+if ($text='ciao') {$response = "Ciao $firstname $lastname il tuo username è $username";}
 //if(strpos($text, "/start") === 0 || $text=="ciao")
 //{
 //$tastiera=0;
