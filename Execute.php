@@ -14,6 +14,10 @@ $text = trim($text); $text = strtolower($text); header("Content-Type: applicatio
 $parameters = array('chat_id' => $chatId, "text" => $text); 
 $parameters["method"] = "sendMessage"; echo json_encode($parameters);
 
-if(strpos($text, /start) === 0 || $text==hello) {$response = "Hello $firstname, welcome"};
+if(strpos($text, "/start") === 0 || $text=="ciao")
+{
+$tastiera=0;
+$response = "Ciao $firstname $lastname il tuo username è $username";
+}
 ?>
 
