@@ -14,6 +14,7 @@ $text = trim($text); $text = strtolower($text); header("Content-Type: applicatio
 $parameters = array('chat_id' => $chatId, "text" => $text); 
 $parameters["method"] = "sendMessage"; echo json_encode($parameters);
 if ($text='ciao') {$response = "Ciao $firstname $lastname il tuo username è $username";}
+else {$response = "Ciao $firstname $lastname il tuo username è $username";}
 //if(strpos($text, "/start") === 0 || $text=="ciao")
 //{
 //$tastiera=0;
