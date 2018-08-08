@@ -17,11 +17,11 @@ if(!$update) {
 // $date = isset($message['date']) ? $message['date'] : ""; 
 // $text = isset($message['text']) ? $message['text'] : ""; 
 
-$message=$update['message']['text'];
-$chatId=$update['message']['text']['id'];
+$text=$update['message']['text'];
+$chatid=$update['message']['from']['id'];
 
 function sendMessage ($chatId, $text) {
-  global $api;
+  //global $api;
   $api='bot542609682:AAEefoEGUUriQtztOG-Yf5LSetKv1EmpxyQ';
   $url="https://api.telegram.org/$api/sendMessage?chatid=$chatid&$text=".urlencode($text); 
   $get = file_get_contents($url);
@@ -46,7 +46,7 @@ function sendMessage ($chatId, $text) {
 // converto e stampo l'array JSON sulla response
 //echo json_encode($parameters);
 
-if($message='/info') {
+if($text='/info') {
   sendMessage ($chatid, "Ciao");
  }
 //else {$response = "Ciao $firstname $lastname il tuo username è $username";}
