@@ -1,8 +1,14 @@
 <?php 
-
-$content = file_get_contents("php://input"); 
+// recupero il contenuto inviato da Telegram
+$content = file_get_contents("php://input");
+// converto il contenuto da JSON ad array PHP
 $update = json_decode($content, true); 
-if(!$update) { exit; } $message = isset($update['message']) ? $update['message'] : ""; 
+
+if(!$update) { 
+  echo "il boot non funziona";
+//  exit; 
+} 
+$message = isset($update['message']) ? $update['message'] : ""; 
 $messageId = isset($message['message_id']) ? $message['message_id'] : ""; 
 $chatId = isset($message['chat']['id']) ? $message['chat']['id'] : ""; 
 $firstname = isset($message['chat']['first_name']) ? $message['chat']['first_name'] : "";
