@@ -2,9 +2,9 @@
 
 <?php echo "It’s all right!";
 // recupero il contenuto inviato da Telegram
-$content = file_get_contents("php://input");
+$content=file_get_contents("php://input");
 // converto il contenuto da JSON ad array PHP
-$update = json_decode($content, true); 
+$update=json_decode($content, true); 
 if(!$update) { 
   exit; 
 } 
