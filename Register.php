@@ -1,6 +1,6 @@
 
 
-<?php 
+77<?php 
 
 // Parameters to modify $WEBHOOK_URL = 'https://{rubrica_test_bot}.herokuapp.com/execute.php'   corretto https://api.telegram.org/bot542609682:AAEefoEGUUriQtztOG-Yf5LSetKv1EmpxyQ/setWebhook?url=https://rubrica_test_bot.herokuapp.com/execute.php;
 
@@ -19,5 +19,5 @@
 
 
 
-?>
+//?>
 
