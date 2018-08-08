@@ -36,7 +36,7 @@ $parameters["reply_markup"] = json_encode($keyboard, true);
 // converto e stampo l'array JSON sulla response
 echo json_encode($parameters);
 
-if ($text='ciao') {$response = "Ciao $firstname $lastname il tuo username è $username";
+if ($text='/command1') {$response = "Ciao $firstname $lastname il tuo username è $username";
                   echo $response;}
 //else {$response = "Ciao $firstname $lastname il tuo username è $username";}
 //if(strpos($text, "/start") === 0 || $text=="ciao")
