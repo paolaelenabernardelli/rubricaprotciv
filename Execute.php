@@ -20,6 +20,9 @@ if(!$update) {
 $text=$update['message']['text'];
 $chatid=$update['message']['from']['id'];
 
+$agg=json_encode($update, JSON_PRETTY_PRINT);
+sendMessage ($chatid, "$agg");
+
 function sendMessage ($chatId, $text) {
   //global $api;
   $api='bot542609682:AAEefoEGUUriQtztOG-Yf5LSetKv1EmpxyQ';
@@ -46,9 +49,9 @@ function sendMessage ($chatId, $text) {
 // converto e stampo l'array JSON sulla response
 //echo json_encode($parameters);
 
-if($text='/info') {
-  sendMessage ($chatid, "Ciao");
- }
+//if($text='/info') {
+  //sendMessage ($chatid, "Ciao");
+// }
 //else {$response = "Ciao $firstname $lastname il tuo username è $username";}
 //if(strpos($text, "/start") === 0 || $text=="ciao")
 //{
