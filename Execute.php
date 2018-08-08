@@ -33,7 +33,7 @@ function sendMessage ($chatId, $text) {
 //$text = strtolower($text);
 // mi preparo a restitutire al chiamante la mia risposta che è un oggetto JSON
 // imposto l'header della risposta
-/header("Content-Type: application/json");
+//header("Content-Type: application/json");
 // la mia risposta è un array JSON composto da chat_id, text, method
 // chat_id mi consente di rispondere allo specifico utente che ha scritto al bot
 // text è il testo della risposta
@@ -46,8 +46,10 @@ function sendMessage ($chatId, $text) {
 // converto e stampo l'array JSON sulla response
 //echo json_encode($parameters);
 
-if ($text='/ricerca') {$response = "Ciao $firstname $lastname il tuo username è $username";
-                  echo $response;}
+if ($message='/info') {
+  
+  sendMessage ($chatid, "Ciao");
+ }
 //else {$response = "Ciao $firstname $lastname il tuo username è $username";}
 //if(strpos($text, "/start") === 0 || $text=="ciao")
 //{
