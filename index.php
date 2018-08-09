@@ -18,6 +18,6 @@ function sendMessage($chatId, $text) {
   $url=$GLOBALS[$website].$api."/sendMessage?chatid=$chatid&$text=".urlencode($text); 
   $get = file_get_contents($url);
   }
-sendMessage($chatid, "$agg");
+sendMessage($chatid,"Ciao");
 ?>
 
