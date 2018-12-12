@@ -1,22 +1,14 @@
 
 
-<?php echo "It’s all right!";
-$content = file_get_contents("php://input");
-$update = json_decode($content, true);
-
-if(!$update)
+<?php 
+if($msg == "/start")
 {
-  exit;
+sm($chatID, "Il Bot funziona!
+Tastiera normale: /tastiera
+Tastiera inline: /itastiera
+Iscritti: /iscritti
+Feedback: /feedback
+Foto: /foto");
 }
-
-$apiToken = "542609682:AAEefoEGUUriQtztOG-Yf5LSetKv1EmpxyQ";
-
-$data = [
-    'chat_id' => '@my_channel_name',
-    'text' => 'Hello world!'
-];
-
-$response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?".http_build_query($data) );
-// Do what you want with result
 ?>
 
