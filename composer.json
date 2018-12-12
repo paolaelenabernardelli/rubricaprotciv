@@ -1,1 +1,5 @@
-{}
+{"name": "paolaelenabernardelli/rubricaprotciv",
+    "type": "project",
+    "require": {
+        "php": ">=5.5",
+        "longman/telegram-bot": "*"}
